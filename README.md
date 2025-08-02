@@ -11,3 +11,9 @@ https://soulemanou-kunchiefuh-babanou.medium.com/how-install-tailwind-css-in-a-r
     -npx expo start --web
 5.  -git config --global user.email "autsadaheha@gmail.com"
     -git config --global user.name "autsada555"
+
+commit 
+    -git branch
+    -git checkout ชื่อ-branch
+    -git add .
+    -git commit -m "ข้อความ commit"
