@@ -9,3 +9,5 @@ https://soulemanou-kunchiefuh-babanou.medium.com/how-install-tailwind-css-in-a-r
 4.  npm install -g expo-cli
     npm install react-dom@19.0.0, react-native-web@^0.20.0, @expo/metro-runtime@~5.0.4
     -npx expo start --web
+5.  -git config --global user.email "autsadaheha@gmail.com"
+    -git config --global user.name "autsada555"
