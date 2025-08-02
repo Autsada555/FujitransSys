@@ -17,3 +17,9 @@ commit
     -git checkout ชื่อ-branch
     -git add .
     -git commit -m "ข้อความ commit"
+
+    merge
+    -git checkout main
+    -git pull origin ชื่อ-branch
+    -git merge test
+    -git push origin main
