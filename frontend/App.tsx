@@ -1,13 +1,29 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-import tw from 'twrnc';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import BookingScreen from './src/pages/Bookingcar';
+import HistoryScreen from './src/pages/History';
+import ProfileScreen from './src/pages/Profile';
+import Layout from './src/components/Layout';
 
-const App = () => {
-  return (
-    <View style={tw`flex-1 justify-center items-center bg-blue-500`}>
-      <Text style={tw`text-white text-lg`}>Hello, Tailwind!</Text>
-    </View>
+const Stack = createNativeStackNavigator();
+
+const withLayout = (Component: React.ComponentType<any>) => {
+  return (props: any) => (
+    <Layout>
+      <Component {...props} />
+    </Layout>
   );
 };
 
-export default App;
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Booking" component={withLayout(BookingScreen)} />
+        <Stack.Screen name="History" component={withLayout(HistoryScreen)} />
+        <Stack.Screen name="Profile" component={withLayout(ProfileScreen)} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
